@@ -10,14 +10,23 @@ public class EJ_1 {
         // Creacion de los Threads
         for (byte i = 0; i < NUMTHREADS; i++) {
             System.out.println("Creando el hilo " + i);
-            listThreads.add(new Thread(new Hilo()));
             byteArrayList.add((byte) 0);
+            listThreads.add(new Thread(new Hilo(byteArrayList)));
         }
 
         // Iniciacion de los threads
         for (byte i = 0; i < NUMTHREADS; i++) {
             System.out.println("Iniciando el hilo: " + i);
             listThreads.get(i).start();
+        }
+
+        // JOINS
+        for (byte i = 0; i < NUMTHREADS; i++) {
+            try {
+                listThreads.get(i).join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
