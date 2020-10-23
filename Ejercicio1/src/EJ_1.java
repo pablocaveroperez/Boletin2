@@ -11,9 +11,13 @@ public class EJ_1 {
         for (byte i = 0; i < NUMTHREADS; i++) {
             System.out.println("Creando el hilo " + i);
             listThreads.add(new Thread(new Hilo()));
+            byteArrayList.add((byte) 0);
         }
 
         // Iniciacion de los threads
-        for ()
+        for (byte i = 0; i < NUMTHREADS; i++) {
+            System.out.println("Iniciando el hilo: " + i);
+            listThreads.get(i).start();
+        }
     }
 }
