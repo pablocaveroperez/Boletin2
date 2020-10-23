@@ -12,5 +12,8 @@ public class EJ_1 {
             System.out.println("Creando el hilo " + i);
             listThreads.add(new Thread(new Hilo()));
         }
+
+        // Iniciacion de los threads
+        for ()
     }
 }
