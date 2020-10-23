@@ -11,7 +11,7 @@ public class EJ_1 {
         for (byte i = 0; i < NUMTHREADS; i++) {
             System.out.println("Creando el hilo " + i);
             byteArrayList.add((byte) 0);
-            listThreads.add(new Thread(new Hilo(byteArrayList)));
+            listThreads.add(new Thread(new Hilo()));
         }
 
         // Iniciacion de los threads

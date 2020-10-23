@@ -5,10 +5,8 @@ public class Hilo implements Runnable {
     private final byte bMAXNUM = 50;
     private final byte bMINNUM = -50;
     private byte iNum;
-    private ArrayList<Byte> byteArrayList = new ArrayList<>();
 
-    public Hilo (ArrayList<Byte> byteArrayList) {
-        this.byteArrayList = byteArrayList;
+    public Hilo () {
     }
 
     public byte getbMAXNUM() {
@@ -23,14 +21,18 @@ public class Hilo implements Runnable {
         return iNum;
     }
 
-    public ArrayList<Byte> getByteArrayList() {
-        return byteArrayList;
+    private void setiNum(byte iNum) {
+        this.iNum = iNum;
     }
 
     @Override
     public void run() {
         Random r = new Random();
-        iNum = (byte) (bMINNUM + r.nextInt(bMAXNUM - bMINNUM + 1));
+        setiNum((byte) (bMINNUM + r.nextInt(bMAXNUM - bMINNUM + 1)));
+        cambiarValorArrayList();
+    }
+
+    private void cambiarValorArrayList() {
 
     }
 }
