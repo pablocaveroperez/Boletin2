@@ -17,12 +17,14 @@ public class EJ_3 {
         }
 
         for (int i = 0; i < NUMTHREADS; i++) {
-            System.out.println("\nAntes:");
+            System.out.println("Hilo numero " + i);
+            System.out.println("Antes:");
             imprimirArray(elementos);
             listRunnable.get(i).run();
             elementos = listRunnable.get(i).getElementos();
             System.out.println("\nDespues:");
             imprimirArray(elementos);
+            System.out.println();
         }
     }
 
