@@ -35,6 +35,15 @@ public class EJ_1 {
             System.out.println("Valor de la posicion" + i + ": " + byteArrayList[i]);
         }
 
+        // JOINS
+        for (byte i = 0; i < NUMTHREADS; i++) {
+            try {
+                listThreads.get(i).join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
         // Cambiar el valor del array de numeros
         for (byte i = 0; i < byteArrayList.length; i++) {
             Hilo hilo = listRunnables.get(i);
@@ -46,13 +55,6 @@ public class EJ_1 {
             System.out.println("Valor de la posicion" + i + ": " + byteArrayList[i]);
         }
 
-        // JOINS
-        for (byte i = 0; i < NUMTHREADS; i++) {
-            try {
-                listThreads.get(i).join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+
     }
 }
