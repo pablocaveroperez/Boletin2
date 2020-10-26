@@ -1,4 +1,4 @@
-public class Hilo1 {
+public class Hilo1 implements Runnable {
     private String sCadena;
 
     public Hilo1(String sCadena) {
@@ -6,4 +6,8 @@ public class Hilo1 {
     }
 
 
+    @Override
+    public void run() {
+        System.out.println("Cadena recibida: " + sCadena);
+    }
 }
