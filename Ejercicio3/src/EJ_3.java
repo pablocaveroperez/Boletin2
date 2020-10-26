@@ -16,8 +16,18 @@ public class EJ_3 {
             listRunnable.add(new Hilo());
         }
 
+        for (int i = 0; i < NUMTHREADS; i++) {
+
+        }
 
 
 
+
+    }
+
+    private static void imprimirArray(byte[] bytes) {
+        for (int i = 0; i < bytes.length; i++) {
+            System.out.print(bytes[i] + " ");
+        }
     }
 }
