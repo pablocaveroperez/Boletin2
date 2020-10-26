@@ -17,12 +17,11 @@ public class EJ_3 {
         }
 
         for (int i = 0; i < NUMTHREADS; i++) {
-
+            imprimirArray(elementos);
+            listRunnable.get(i).run();
+            elementos = listRunnable.get(i).getElementos();
+            imprimirArray(elementos);
         }
-
-
-
-
     }
 
     private static void imprimirArray(byte[] bytes) {
