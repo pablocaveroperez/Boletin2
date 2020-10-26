@@ -1,3 +1,5 @@
+import validaciones.ValidaLibrary;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -25,6 +27,8 @@ public class Hilo implements Runnable {
     }
 
     private void readNPrint() {
+        String sLeido = ValidaLibrary.leer("Escribe lo que quieras neneeeeeeeeeeeeeeeeee: ");
+        System.out.println("Esto es lo que has escrito, chulo: \t" +sLeido);
     }
 
     private void product2Arrays() {
