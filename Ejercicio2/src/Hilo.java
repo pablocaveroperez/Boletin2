@@ -1,4 +1,5 @@
 public class Hilo implements Runnable {
+    private final byte BUCLE100 = 100;
     private byte bId;
     public Hilo (byte bId) {
         this.bId = bId;
@@ -12,6 +13,8 @@ public class Hilo implements Runnable {
             product2Arrays();
         else if (bId == 2)
             readNPrint();
+        else
+            System.out.println("ID introducido no valido.");
     }
 
     private void readNPrint() {
@@ -21,6 +24,8 @@ public class Hilo implements Runnable {
     }
 
     private void bucle100() {
-
+        for (int i = 0; i < BUCLE100; i++) {
+            System.out.println(i);
+        }
     }
 }
